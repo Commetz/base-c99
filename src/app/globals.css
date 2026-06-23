@@ -227,8 +227,11 @@ pre {
 }
 
 pre > code {
-  display: grid;
   counter-reset: line;
+}
+
+pre .line:empty::before {
+  content: " ";
 }
 
 code {
