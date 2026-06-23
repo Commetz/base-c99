@@ -1,0 +1,243 @@
+@import "tailwindcss";
+
+:root {
+  /* ===== Base C — Design Tokens (alinhado ao panfleto oficial) ===== */
+  /* Fundo: navy escuro, igual ao terminal mostrado no laptop do panfleto */
+  --bg: #081427;
+  --bg-raised: #0d1d36;
+  --bg-card: #112441;
+
+  /* Texto */
+  --fg: #e8edf7;
+  --fg-muted: #9aabc4;
+  --fg-faint: #5f7295;
+
+  /* Acento único: azul vibrante da marca (do panfleto) */
+  --accent: #2f6fed;
+  --accent-soft: #6f9bff;
+  --accent-dim: #15305f;
+
+  /* Apoio: verde-petróleo da marca, usado com moderação */
+  --support: #1f8f86;
+  --support-soft: #3fb6ac;
+
+  /* Apoio secundário: roxo da marca, para o card de dificuldade/destaque alternativo */
+  --violet: #6c4fd6;
+  --violet-soft: #9b86e8;
+
+  /* Bordas e linhas */
+  --border: #1c2d4d;
+  --border-soft: #142238;
+
+  /* Sinalização semântica */
+  --ok: #3fb6ac;
+  --warn: #e0a83f;
+  --danger: #e0594a;
+
+  /* ===== Fontes — stacks de sistema, sem depender de download externo ===== */
+  /* Display: serifada elegante para títulos, com fallback amplo de sistema */
+  --font-stack-display: "Iowan Old Style", "Palatino Linotype", Palatino,
+    Georgia, "Times New Roman", serif;
+  /* Corpo: sans-serif neutra e legível, nativa de cada sistema operacional */
+  --font-stack-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Inter, "Helvetica Neue", Arial, sans-serif;
+  /* Código: monospace nativa, com boa legibilidade de caracteres ambíguos */
+  --font-stack-mono: "SF Mono", "Cascadia Code", "Consolas",
+    "Liberation Mono", Menlo, Monaco, monospace;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-bg-raised: var(--bg-raised);
+  --color-bg-card: var(--bg-card);
+  --color-fg: var(--fg);
+  --color-fg-muted: var(--fg-muted);
+  --color-fg-faint: var(--fg-faint);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --color-accent-dim: var(--accent-dim);
+  --color-support: var(--support);
+  --color-support-soft: var(--support-soft);
+  --color-violet: var(--violet);
+  --color-violet-soft: var(--violet-soft);
+  --color-border: var(--border);
+  --color-border-soft: var(--border-soft);
+  --color-ok: var(--ok);
+  --color-warn: var(--warn);
+  --color-danger: var(--danger);
+
+  --font-display: var(--font-stack-display);
+  --font-body: var(--font-stack-body);
+  --font-mono: var(--font-stack-mono);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+}
+
+/* Foco visível para acessibilidade de teclado */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* Scrollbar customizada, consistente com o tema */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-raised);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 8px;
+  border: 2px solid var(--bg-raised);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--support);
+}
+
+/* Textura sutil de "grão" no fundo — referência a CRT/terminal antigo, muito discreta */
+.bg-grain {
+  position: relative;
+}
+.bg-grain::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.025) 1px, transparent 0);
+  background-size: 3px 3px;
+  opacity: 0.5;
+}
+
+/* Reduz movimento para quem prefere */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ===== Conteúdo de aula renderizado a partir de markdown ===== */
+.prose-content h2 {
+  font-family: var(--font-display);
+  font-size: 1.65rem;
+  font-weight: 600;
+  color: var(--fg);
+  margin: 2.5rem 0 1rem;
+  letter-spacing: -0.01em;
+}
+.prose-content h2:first-child {
+  margin-top: 0;
+}
+.prose-content h3 {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--accent-soft);
+  margin: 2rem 0 0.75rem;
+}
+.prose-content h4 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--fg);
+  margin: 1.5rem 0 0.5rem;
+}
+.prose-content p {
+  color: var(--fg-muted);
+  line-height: 1.75;
+  margin-bottom: 1rem;
+}
+.prose-content ul, .prose-content ol {
+  color: var(--fg-muted);
+  margin: 0 0 1.25rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+.prose-content ul { list-style: disc; }
+.prose-content ol { list-style: decimal; }
+.prose-content strong {
+  color: var(--fg);
+  font-weight: 600;
+}
+.prose-content blockquote {
+  border-left: 3px solid var(--accent-dim);
+  background: var(--bg-card);
+  padding: 0.75rem 1rem;
+  border-radius: 0 8px 8px 0;
+  margin: 1.25rem 0;
+  color: var(--fg-muted);
+}
+.prose-content blockquote p {
+  margin-bottom: 0;
+}
+.prose-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.25rem 0;
+  font-size: 0.9rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+}
+.prose-content th, .prose-content td {
+  border: 1px solid var(--border);
+  padding: 0.55rem 0.8rem;
+  text-align: left;
+}
+.prose-content th {
+  background: var(--bg-raised);
+  color: var(--fg);
+  font-weight: 600;
+}
+.prose-content td {
+  color: var(--fg-muted);
+}
+.prose-content pre {
+  margin: 1.25rem 0;
+}
+
+/* ===== Blocos de código (rehype-pretty-code) ===== */
+pre {
+  padding: 1.1rem 1.25rem;
+  border-radius: 10px;
+  background: var(--bg-raised) !important;
+  border: 1px solid var(--border);
+  overflow-x: auto;
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  line-height: 1.65;
+}
+
+pre > code {
+  display: grid;
+  counter-reset: line;
+}
+
+code {
+  font-family: var(--font-mono);
+}
+
+:not(pre) > code {
+  background: var(--bg-raised);
+  border: 1px solid var(--border);
+  padding: 0.15em 0.4em;
+  border-radius: 4px;
+  font-size: 0.875em;
+  color: var(--accent-soft);
+}

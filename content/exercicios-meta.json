@@ -1,0 +1,25 @@
+{
+  "_comentario": "Metadados OPCIONAIS por exercício. A chave é 'categoria/numero'. Todos os campos são opcionais — se um exercício não estiver aqui, o site usa o título extraído automaticamente do .c e a dificuldade padrão da categoria. Preencha conforme tiver tempo: tags, descricao e video são os mais valiosos para o aluno. Para adicionar um vídeo, cole o link do YouTube no campo 'video'.",
+
+  "iniciante/1000": {
+    "tags": ["printf"],
+    "descricao": "O primeiro programa em C que um programador escreve.",
+    "dificuldade": "facil",
+    "video": "https://youtu.be/88e9YM_BJpM?si=T3vByFz9QGBeB_O0"
+  },
+  "iniciante/1002": {
+    "tags": ["ponto flutuante", "fórmulas"],
+    "descricao": "Leia o raio de um círculo (número real) e calcule sua área, exibindo o resultado com 4 casas decimais.",
+    "dificuldade": "facil"
+  },
+  "iniciante/1019": {
+    "tags": ["operadores", "divisão e resto"],
+    "descricao": "Leia um tempo em segundos e converta para horas, minutos e segundos, usando divisão inteira e o operador de resto (%).",
+    "dificuldade": "facil"
+  },
+  "iniciante/1021": {
+    "tags": ["loops", "divisão e resto"],
+    "descricao": "Leia um valor em reais e calcule a menor quantidade de notas e moedas necessárias para compor esse valor.",
+    "dificuldade": "medio"
+  }
+}
