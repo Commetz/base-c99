@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description:
     "Material de extensão universitária para aprender C99 do zero: aulas guiadas e exercícios resolvidos do Beecrowd, organizados por categoria.",
   icons: {
-    icon: "/favicon.ico",
+    icon: "/favicon.png",
   },
 };
 
