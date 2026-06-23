@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   title: "Base C — Fundamentos de C99 para calouros",
   description:
     "Material de extensão universitária para aprender C99 do zero: aulas guiadas e exercícios resolvidos do Beecrowd, organizados por categoria.",
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({
