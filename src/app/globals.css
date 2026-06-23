@@ -33,7 +33,7 @@
   --ok: #3fb6ac;
   --warn: #e0a83f;
   --danger: #e0594a;
-  --anomaly: #141414;
+  --anomaly: #000000;
 
   /* ===== Fontes — stacks de sistema, sem depender de download externo ===== */
   /* Display: serifada elegante para títulos, com fallback amplo de sistema */
