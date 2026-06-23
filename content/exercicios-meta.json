@@ -21,5 +21,10 @@
     "tags": ["loops", "divisão e resto"],
     "descricao": "Leia um valor em reais e calcule a menor quantidade de notas e moedas necessárias para compor esse valor.",
     "dificuldade": "medio"
+  },
+  "iniciante/3267": {
+    "tags": ["loops", "divisão e resto"],
+    "descricao": "Leia um valor em reais e calcule a menor quantidade de notas e moedas necessárias para compor esse valor.",
+    "dificuldade": "anomalia"
   }
 }
