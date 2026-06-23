@@ -5,6 +5,7 @@ const CLASSES: Record<Dificuldade, string> = {
   facil: "bg-ok/10 text-ok border-ok/30",
   medio: "bg-warn/10 text-warn border-warn/30",
   dificil: "bg-danger/10 text-danger border-danger/30",
+  anomalia: "bg-gray/10 text-gray border-gray/30",
 };
 
 export function DificuldadeBadge({
