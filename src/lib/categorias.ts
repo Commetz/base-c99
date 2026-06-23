@@ -1,4 +1,4 @@
-export type Dificuldade = "facil" | "medio" | "dificil";
+export type Dificuldade = "facil" | "medio" | "dificil" | "anomalia";
 
 export type Categoria = {
   slug: string;
@@ -61,4 +61,5 @@ export const DIFICULDADE_LABEL: Record<Dificuldade, string> = {
   facil: "Fácil",
   medio: "Médio",
   dificil: "Difícil",
+  anomalia: "Anomalia",
 };
