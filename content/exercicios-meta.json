@@ -7,10 +7,20 @@
     "dificuldade": "facil",
     "video": "https://youtu.be/88e9YM_BJpM?si=T3vByFz9QGBeB_O0"
   },
+  "iniciante/1001": {
+    "tags": ["ponto flutuante", "fórmulas"],
+    "descricao": "Leia o raio de um círculo (número real) e calcule sua área, exibindo o resultado com 4 casas decimais.",
+    "dificuldade": "medio"
+  },
   "iniciante/1002": {
     "tags": ["ponto flutuante", "fórmulas"],
     "descricao": "Leia o raio de um círculo (número real) e calcule sua área, exibindo o resultado com 4 casas decimais.",
-    "dificuldade": "facil"
+    "dificuldade": "dificil"
+  },
+  "iniciante/1003": {
+    "tags": ["ponto flutuante", "fórmulas"],
+    "descricao": "Leia o raio de um círculo (número real) e calcule sua área, exibindo o resultado com 4 casas decimais.",
+    "dificuldade": "anomalia"
   },
   "iniciante/1019": {
     "tags": ["operadores", "divisão e resto"],
