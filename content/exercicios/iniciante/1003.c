@@ -4,16 +4,17 @@
 
 int main() {
 
-    // Declarando três variáveis de valores inteiros 
+    // Declarando três variáveis de valores inteiros
     int a, b, soma;
     // Lendo os valores de "a" e de "b"
     scanf("%d %d", &a, &b);
 
-    // Afirmando que a variável "soma" tem o valor da soma das outras duas variáveis 
+    // Afirmando que a variável "soma" tem o valor da soma das outras duas variáveis
     soma = a + b;
 
-    // Exibindo a mensagem requisitada 
+    // Exibindo a mensagem requisitada com o valor da variável "soma"
     printf("SOMA = %d\n", soma);
 
+    // Retornando 0 para indicar que o programa foi executado com sucesso
     return 0;
 }

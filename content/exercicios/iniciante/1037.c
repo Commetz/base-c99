@@ -4,9 +4,7 @@
 
 int main() {
 
-    // Declara a variável que armazenará o valor de entrada
     double valor;
-    // Lê o valor digitado pelo usuário
     scanf("%lf", &valor);
 
     // Verifica se o valor está no intervalo [0,25]

@@ -5,19 +5,20 @@
 int main() {
 
     // Declarando as variáveis de valores inteiros "número de um funcionário" e "horas trabalhadas"
-    int n, t;
-    // Declarando as variáveis de valores deciamis "valor que recebe por horas" e "salário"
-    double h, s;
-    // Lendo as 3 variáveis "n", "t" e "h";
-    scanf("%d %d %lf", &n, &t, &h);
+    int numero, horas_trabalhadas;
+    // Declarando as variáveis de valores decimais "valor que recebe por horas" e "salário" para gaurdar o resultado do salário do funcionário
+    double valor_hora, salario;
+    // Lendo as 3 variáveis "numero", "horas_trabalhadas" e "valor_hora";
+    scanf("%d %d %lf", &numero, &horas_trabalhadas, &valor_hora);
 
-    // Afirmando o valor do salário 
-    s = h * t;
+    // Calculando o salário do funcionário multiplicando o valor que recebe por hora pelas horas trabalhadas
+    salario = valor_hora * horas_trabalhadas;
 
-    // Exibindo o número do funcionśrio
-    printf("NUMBER = %d\n", n);
+    // Exibindo o número do funcionário
+    printf("NUMBER = %d\n", numero);
     // Exibindo o salário do funcionário
-    printf("SALARY = U$ %.2lf\n", s);
+    printf("SALARY = U$ %.2lf\n", salario);
 
+    // Retornando 0 para indicar que o programa foi executado com sucesso
     return 0;
 }
